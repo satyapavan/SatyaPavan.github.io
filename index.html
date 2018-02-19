@@ -1,21 +1,61 @@
-	<!doctype html>
-	<html>
-	<head>
-		<title>CSS-Tricks</title>
+<!DOCTYPE html>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111600714-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html>
+  <head>
+    <title>Twitter &hearts; Open Source</title>
 
-  gtag('config', 'UA-111600714-1');
-</script>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 
-	</head>
-	<body>
-		<h1>SatyaPavan.github.io</h1>
-		<h3>If you are reading this, well, its too late...whatever...duh!!</h1>
-</body>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <meta name="twitter:title" content="Twitter <3 Open Source" />
+
+
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>Twitter Open Source</h1></div>
+        <h1>Twitter is built on open source software.</h1>
+        <p>Want to contribute? <a href="https://careers.twitter.com/">Join the Flock</a></p>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/twitter/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
+            <br>
+            <a href="https://github.com/twitter?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
+          </p>
+        </div>
+
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/twitter/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-111600714-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+    <script type="text/javascript">
+    (function ($, undefined) {
+    	//
+    })(jQuery);
+    </script>
+  </body>
 </html>
