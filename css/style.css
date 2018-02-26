@@ -1,0 +1,23 @@
+nav, .navbar {
+	background-color: #563d7c;
+	margin-bottom: 2rem;
+}
+
+.nav-item, .nav-link, .navbar-brand {
+	color: #cbbde2;
+}
+
+.nav-item:hover, .nav-link:hover, .navbar-brand:hover {
+	color: #fff;
+}
+
+.active .nav-link{
+	color: #fff;
+	font-style: bold;
+}
+
+form > #btn-outline-success {
+	color: #cbbde2;
+	border-color: #cbbde2;
+}
+
