@@ -1,9 +1,15 @@
+.navbar-brand {
+ 	font-family: 'Caveat', cursive;
+	font-size-adjust: x-large;
+	color: #fff;
+}
+
 nav, .navbar {
 	background-color: #563d7c;
 	margin-bottom: 2rem;
 }
 
-.nav-item, .nav-link, .navbar-brand {
+.nav-item, .nav-link {
 	color: #cbbde2;
 }
 
@@ -16,8 +22,14 @@ nav, .navbar {
 	font-style: bold;
 }
 
-form > #btn-outline-success {
+form > .btn-outline-success {
 	color: #cbbde2;
 	border-color: #cbbde2;
+	background-color: #563d7c;
 }
 
+form > .btn-outline-success:hover {
+	color: #fff;
+	border-color: #cbbde2;
+	background-color: #563D9D;
+}
