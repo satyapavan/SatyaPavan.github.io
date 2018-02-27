@@ -21,18 +21,49 @@
       <!-- below code is for showing the icon as part of browser tab -->
       <link rel="shortcut icon" href="https://SatyaPavan.github.io/favicon.ico">
 
-
       <!-- been using the wrong version of bootstrap all along :-( and was wondering why the stuff is not working -->
       <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+      <link rel="stylesheet" href="css/style.css">
+
     </head>
     <body>
+
+      <header>
+        <nav class="navbar sticky-top navbar-expand-lg">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">About Me</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+      </header>
 
      <div id="repo-content" class="container">
        <!-- will be filled by the js code on load -->
      </div>
 
+      <footer>
+        <!-- <span class="fixed-bottom bg-dark text-white text-center-align">Welcome to my page</span> -->
+      </footer>
       <!-- START - Below items are for jQuery to work -->
        <script 
           src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" 
