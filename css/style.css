@@ -38,6 +38,9 @@ small {
 	font-size: 75%;
 }
 
+#repo-parent {
+	background-color: #fafbfc;
+}
 .card-columns {
   column-count: 4;
 
