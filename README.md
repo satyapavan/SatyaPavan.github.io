@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/satyapavan/SatyaPavan.github.io.svg?branch=master)](https://travis-ci.org/satyapavan/SatyaPavan.github.io)
+
 # SatyaPavan.github.io
 If you are reading this, well, its too late...whatever...duh!!
  
