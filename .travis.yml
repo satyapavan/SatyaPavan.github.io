@@ -6,7 +6,10 @@ addons:
 
 script:
   - hugo -t beautifulhugo
-  
+
+edge:
+  branch: v1.8.47
+    
 deploy:
   provider: pages
   skip-cleanup: true
