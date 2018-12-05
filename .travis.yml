@@ -4,6 +4,9 @@ addons:
   snaps:
   - hugo
 
+before_install:
+  - rm -rf public/
+
 script:
   - hugo -t beautifulhugo
 
