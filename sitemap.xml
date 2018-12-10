@@ -3,15 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://SatyaPavan.github.io/page/about/</loc>
+    <lastmod>2018-12-10T22:55:50+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://SatyaPavan.github.io/</loc>
-  </url>
-  
-  <url>
-    <loc>https://SatyaPavan.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://SatyaPavan.github.io/post/about/</loc>
+    <lastmod>2018-12-10T22:55:50+05:30</lastmod>
   </url>
   
   <url>
@@ -20,7 +18,8 @@
   </url>
   
   <url>
-    <loc>https://SatyaPavan.github.io/post/</loc>
+    <loc>https://SatyaPavan.github.io/page/</loc>
+    <lastmod>2018-12-10T22:55:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
