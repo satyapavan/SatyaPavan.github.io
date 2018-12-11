@@ -19,17 +19,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>About</title>
-      <link>https://SatyaPavan.github.io/page/about/</link>
-      <pubDate>Mon, 10 Dec 2018 22:55:50 +0530</pubDate>
-      
-      <guid>https://SatyaPavan.github.io/page/about/</guid>
-      <description>I am Satya Pavan A Software Engineer working as a Solutions Architect (yes, we do exist) for a Telecom gaint.
-I am a C++ and Java developer by Profession, python&amp;lsquo;er by passion and javascript&amp;lsquo;er by necessity.
-I have a softspot for *nix shells but my latest crush is with Microsoft.
-What is the most difficult part of being an architect? Well, it is not to code it yourself :-)</description>
-    </item>
-    
   </channel>
 </rss>
