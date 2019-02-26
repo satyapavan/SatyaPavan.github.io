@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Serverless Soul</title>
+    <link>https://SatyaPavan.github.io/post/blog/</link>
+    <description>Recent content in Blog on Serverless Soul</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 18 Jan 2019 23:41:48 +0530</lastBuildDate>
+    
+	<atom:link href="https://SatyaPavan.github.io/post/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Let&#39;s begin with a mistake</title>
+      <link>https://SatyaPavan.github.io/post/blog/2019-2-26-lets-begin-with-a-mistake/</link>
+      <pubDate>Tue, 26 Feb 2019 01:16:20 +0530</pubDate>
+      
+      <guid>https://SatyaPavan.github.io/post/blog/2019-2-26-lets-begin-with-a-mistake/</guid>
+      <description>This is column 1. This is column 2.     </description>
+    </item>
+    
+  </channel>
+</rss>
