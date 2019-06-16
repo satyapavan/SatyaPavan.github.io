@@ -16,14 +16,14 @@
     "@type": "WebSite",
     "name": "Serverless Soul",
     
-    "url": "https://SatyaPavan.github.io"
+    "url": "https:\/\/SatyaPavan.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://SatyaPavan.github.io"
+  "url": "https:\/\/SatyaPavan.github.io"
   
   
   
@@ -51,7 +51,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Serverless Soul" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <link rel="alternate" href="https://SatyaPavan.github.io/index.xml" type="application/rss+xml" title="Serverless Soul">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -318,8 +318,8 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
-          &nbsp;&bull;&nbsp;[<a href="true36e6ea83b9026a13abfa82787f32b884b542834a">36e6ea8</a>]<br>[Deployed on 2019-02-26 17:47:09 UTC]
+          <a href="http://gohugo.io">Hugo v0.55.6</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          &nbsp;&bull;&nbsp;[<a href="true91fed74755b1de48de8cb539421b69e208b41a2b">91fed74</a>]<br>[Deployed on 2019-06-16 06:28:17 UTC]
         </p>
       </div>
     </div>
