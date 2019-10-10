@@ -5,13 +5,16 @@
   <url>
     <loc>https://SatyaPavan.github.io/blog/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://SatyaPavan.github.io/categories/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://SatyaPavan.github.io/categories/productivity/</loc>
+    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,24 +25,16 @@
   <url>
     <loc>https://SatyaPavan.github.io/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://SatyaPavan.github.io/categories/productivity/</loc>
-    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://SatyaPavan.github.io/blog/lets-begin-with-a-mistake/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://SatyaPavan.github.io/categories/learning/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://SatyaPavan.github.io/blog/lets-begin-with-a-mistake/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,7 +48,6 @@
   
   <url>
     <loc>https://SatyaPavan.github.io/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
