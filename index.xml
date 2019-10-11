@@ -33,5 +33,14 @@ From this experience, here are the key takeways for wannabe folks like me.
  Focus on your goals To improve my technical learning and writing skills, I wanted to start a blog.</description>
     </item>
     
+    <item>
+      <title>Fork bomb</title>
+      <link>https://SatyaPavan.github.io/blog/fork-bomb/</link>
+      <pubDate>Sat, 22 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://SatyaPavan.github.io/blog/fork-bomb/</guid>
+      <description>A fork bomb works by creating a large number of processes very quickly in order to saturate the available space in the list of processes kept by the computer’s operating system. If the process table becomes saturated, no new programs may start until another process terminates. Even if that happens, it is not likely that a useful program may be started since the instances of the bomb program will each attempt to take any newly-available slot themselves.</description>
+    </item>
+    
   </channel>
 </rss>
