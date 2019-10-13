@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Satya Pavan&#39;s Serverless Soul</title>
+    <link>https://SatyaPavan.github.io/</link>
+    <description>Recent content on Satya Pavan&#39;s Serverless Soul</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://SatyaPavan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Productivity Hacks</title>
+      <link>https://SatyaPavan.github.io/blog/productivity-hacks/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://SatyaPavan.github.io/blog/productivity-hacks/</guid>
+      <description>Contrasting Personal and Professional roles If you’re productive in one way at work, take the opposite approach in your personal life. The goal is to essentially flex different social and cognitive muscles.
+ Open “loops” When you fill up all the gaps in your day by checking your messages or browsing on social media sites, for example when you’re standing in line or commuting, you lose opportunities to get lost in thought, the moments when the best ideas happen.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s begin with a mistake</title>
+      <link>https://SatyaPavan.github.io/blog/lets-begin-with-a-mistake/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://SatyaPavan.github.io/blog/lets-begin-with-a-mistake/</guid>
+      <description>Tuco: When you have to shoot, shoot. Don&amp;rsquo;t talk.
+He would have said the same of this blog too. What started as a &amp;ldquo;simple blog&amp;rdquo; project, transformed into a &amp;ldquo;Building a fullblown website and content management from scratch&amp;rdquo; project. Net result? 0 ROI.
+From this experience, here are the key takeways for wannabe folks like me.
+ Focus on your goals To improve my technical learning and writing skills, I wanted to start a blog.</description>
+    </item>
+    
+    <item>
+      <title>Fork bomb</title>
+      <link>https://SatyaPavan.github.io/blog/fork-bomb/</link>
+      <pubDate>Sat, 22 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://SatyaPavan.github.io/blog/fork-bomb/</guid>
+      <description>A fork bomb works by creating a large number of processes very quickly in order to saturate the available space in the list of processes kept by the computer’s operating system. If the process table becomes saturated, no new programs may start until another process terminates. Even if that happens, it is not likely that a useful program may be started since the instances of the bomb program will each attempt to take any newly-available slot themselves.</description>
+    </item>
+    
+  </channel>
+</rss>
