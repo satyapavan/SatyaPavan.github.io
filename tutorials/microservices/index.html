@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Satya Pavan&#39;s Serverless Soul</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="two microservices and their shared database">
+  <meta name="author" content="Satya Pavan">
+  <meta name="generator" content="Hugo 0.69.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://satyapavan.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://satyapavan.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://satyapavan.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://satyapavan.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://satyapavan.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://satyapavan.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://satyapavan.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+      <a class="navbar-brand mobile-view" href="https://satyapavan.github.io/"><img class="img-fluid"
+          src="https://satyapavan.github.io/images/logo.png" alt="Satya Pavan&#39;s Serverless Soul"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="ti-twitter-alt"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://satyapavan.github.io/"><img class="img-fluid"
+            src="https://satyapavan.github.io/images/logo.png" alt="Satya Pavan&#39;s Serverless Soul"></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://satyapavan.github.io/"> Home </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://satyapavan.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://satyapavan.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://satyapavan.github.io/tutorials">Tutorials</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search px-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://satyapavan.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/tutorial"
+          class="text-primary">Tutorial</a>
+        
+        <h2>Microservices</h2>
+        <div class="mb-3 post-meta">
+          <span>By Satya Pavan</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>29 October 2019</span>
+          
+        </div>
+        
+        <img src="https://satyapavan.github.io/images/featured-post/starwars_destroyer.jpg" class="img-fluid w-100 mb-4" alt="Microservices">
+        
+        <div class="content mb-5">
+          <h1 id="microservices-the-big-picture">Microservices: The Big Picture</h1>
+<p>1&gt; Microservices Architecture by Rag Dhiman</p>
+<p>2&gt; Modern Software Architecture by Dino Esposito</p>
+<h2 id="what-are-microservices">What Are Microservices?</h2>
+<p>The main difference between the SOA and microservices is that, though they both develop a single application as a suite of small services, in microservices, we deploy each of these services in their own process and communication with each other (in a lightweight manner, i think this is where json/rest comes into picture)</p>
+<p>Each microservice live independently, but they rely on each other to achieve the task.</p>
+<ol>
+<li>Bounded context</li>
+<li>Autonomously developed</li>
+<li>Independently deployable</li>
+<li>Exchange messages (should be light weight)</li>
+<li>Team more agile</li>
+<li>Faster to develop (parallel teams)</li>
+</ol>
+<p>TODO: Bounded context</p>
+<h2 id="microservices-elements">Microservices Elements</h2>
+<h3 id="building-a-monolith">Building a Monolith</h3>
+<p>Monolith</p>
+<p>PRO&rsquo;s</p>
+<ul>
+<li>Simple to develop</li>
+<li>Simple to build</li>
+<li>simple to test</li>
+<li>simple to deploy</li>
+<li>simple to scale</li>
+</ul>
+<p>Cons</p>
+<ul>
+<li>Difficult for new team members</li>
+<li>Growing teams</li>
+<li>Code harder to understand</li>
+<li>Difficult for emerging tech</li>
+<li>Scaling - need to scale the whole app and not just the required service&rsquo;s</li>
+<li>Overloaded container</li>
+<li>huge database</li>
+</ul>
+<h3 id="building-microservices">Building Microservices</h3>
+<p>Sub domains should be independent and separate. One technique is to duplicate the dependencies in both domains. eg. trail or service.</p>
+<p>I am not a big fan of this though.
+TODO: Look for alternative patterns</p>
+<h3 id="organization">Organization</h3>
+<p>In MS, teams are more independent and responsible as the sub domains are modeled that way. The team sizes can be different and easily managable</p>
+<p>The teams can have their own documentation formats, repo and technologies.</p>
+<h3 id="data-store">Data Store</h3>
+<p>Since services are independent, they have their own data management rules and hence it helps to have their own data source.</p>
+<p>Transaction heavy, some are write mostly and some read only. One may need a relational solution and another a noSQL solution. This kind of heterogeneous solution is only possible with MS.</p>
+<p>But the concept of individual data sources create the problem of data synchronization (specifically the dependencies that we have duplicated across domains).</p>
+<p>There is no distributed transaction concept in MS, as that will lead to low performance. So we will begin with immediate consistent and then move to eventual consistency (this is where event sourcing like kafka comes)</p>
+<p>TODO: Read about Debezium for &ldquo;Capture Data Change&rdquo;</p>
+<p>Data Source : Akka, Kafka, Rabbit MQ</p>
+<h3 id="user-interface">User Interface</h3>
+<p>UI: Helps to have a composite UI, which is going to make multiple async calls and displays the data as and when it loads. eg:amazon</p>
+<h3 id="services">Services</h3>
+<p>Services: They need to communicate in some way,</p>
+<ul>
+<li>&ldquo;Remote Procedure Invocation&rdquo; or RPC.
+This is based on request and reply concept and could be sync or async.
+REST, SOAP, gRPC</li>
+<li>&ldquo;Messaging&rdquo; via a broker or channel using a publish and subscribe.</li>
+</ul>
+<p>Async communication helps a lot to maintain things loosely coupled in MS architecture. They also improve the availability since the broker buffers the message till the consumer is able to process them</p>
+<p>Messaging : Kafka, Rabbit MQ</p>
+<p>Protocol Format Exchange</p>
+<ul>
+<li>TEXT : XML, JSON, YAMLS (human readable and easy to process)</li>
+<li>Binary : gRPC (more compact)</li>
+</ul>
+<p>APIs and Contracts</p>
+<ul>
+<li>Each MS need to publish a contract containing the set of services on what is available and how to invoke them</li>
+<li>Depending on the protocol that we are using we will be using WSDL or Swagger</li>
+<li>To suit multiple devices and needs, you can also have multiple API&rsquo;s and different device specific contracts</li>
+</ul>
+<h3 id="distributed-services">Distributed Services</h3>
+<p>Service Registry</p>
+<ul>
+<li>It is a phone book of services with their locations, letting clients look up services by their logical names.</li>
+<li>We can hardcode the hostnames and their ports, but that&rsquo;s not reliable. To make our app more reliable and scale up for more instances, we need Service Registry</li>
+<li>Each service on start does a self registration to keep the registry uptodate for later lookup</li>
+<li>Eureka, Zookeeper, Consul</li>
+</ul>
+<p>CORS</p>
+<ul>
+<li>Cross Origin Resource Sharing</li>
+<li>We can only interact with documents on the same server as the current service</li>
+<li>Origin = protocol + server + port</li>
+<li>In MS, we deploy each service in different server&rsquo;s, so this is a problem</li>
+<li>Need to resolve by using the HTTP Headers &ldquo;Access-Control-Allow-Origin&rdquo;</li>
+<li>TODO: Are we not relaxing security here? Is this the right thing to do?</li>
+</ul>
+<p>Circuit Breaker</p>
+<ul>
+<li>When we make service chaining (calling multiple services) and when one of the service is down, it leads to a cascade of failure and we call it &ldquo;Domino Effect&rdquo;</li>
+<li>One failure in one system can lead the whole system to fail.</li>
+<li>We resolve it by invoking a proxy that deviates the calls if it see failure more than a threshold</li>
+<li>After timeout, it starts allowing calls or reintroducing traffic in limited numbers till the flowthrough is high.</li>
+<li>TODO: Where will it deviate during failure? what will happen to the user action?</li>
+<li>Hystrix, JRugged</li>
+</ul>
+<p>Gateway</p>
+<ul>
+<li>Can be used for resolving cross-cutting concerns like security</li>
+<li>Acts as the single entry point to the service</li>
+<li>Can handle authorization and authentication here rather than being duplicated in each service call.</li>
+<li>Unified Interface</li>
+<li>Can handle API Translation</li>
+<li>Zuul, Netty, Finagle</li>
+</ul>
+<h3 id="security">Security</h3>
+<p>Security</p>
+<ul>
+<li>Not specific to MS, this is the per-requisite for all now</li>
+<li>Identify and Access Management system can be delegated to take care of authorization and authentication</li>
+<li>Gateway can take care of this and with Single Sign-On, individual services need to replicate the same.</li>
+<li>authentication protocols : Kerberos, OpenID, OAuth 2.0, SAML</li>
+<li>IAM: Okta, Keyclock, Shiro</li>
+</ul>
+<p>Access Token</p>
+<ul>
+<li>it securely stores information about a user and is then exchanged between services</li>
+<li>helps to communicate the identity of the requester between services without the need to re-authenticate every time.</li>
+<li>just need to verify the token and see if the user is authorized for the operation (without the need to authenticate)</li>
+</ul>
+<h3 id="scalability-and-availability">Scalability and Availability</h3>
+<p>Scalability</p>
+<ul>
+<li>Vertical Scaling : More CPU and RAM (i think is this used for monolithic, this is also the CON of monolothic)</li>
+<li>Horizontal Scaling : Service Replication across multiple servers. This is where load balancer comes into picture.</li>
+<li>Ribbon, Meraki</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<p>Monitoring</p>
+<ul>
+<li>Many moving parts and machines to monitor</li>
+<li>Needs to be centralized</li>
+<li>Good to be Visual</li>
+<li>Kibana, Grafana, splunk</li>
+</ul>
+<p>Health Check</p>
+<ul>
+<li>service could be running but incapable of handling requests, due to connection issues?</li>
+<li>need a health check API to perform various checks</li>
+<li>the health check is similar to heart beat and can be called periodically.</li>
+</ul>
+<p>Log Aggregation</p>
+<ul>
+<li>Helps to analyze and search the logs with more end-end infor</li>
+<li>logStash, Splunk, PaperTrail</li>
+</ul>
+<p>Availability</p>
+<ul>
+<li>probability for the system to be available at a given time.</li>
+<li>apps are usually 99.999% available.</li>
+<li>Single Point of Failures like a single Gatway, a single broker or a single IAM could bring the whole system down</li>
+</ul>
+<p>TODO: Check on Dapper, HTrace, Zipkin for Distributed Tracing</p>
+<h3 id="deployment">Deployment</h3>
+<ul>
+<li>Metrics</li>
+<li>Auditing</li>
+<li>Rate limiting (to save from DDos attacks)</li>
+<li>Alerting</li>
+<li>Distributed Tracing (correlation id and chain of calls)</li>
+</ul>
+<h2 id="are-microservices-right-for-your-organization">Are Microservices Right for Your Organization?</h2>
+<p>TODO: Very nice slide summary (Microservices: The Big Picture)</p>
+<h1 id="microservices-architecture">Microservices Architecture</h1>
+<h2 id="introduction">Introduction</h2>
+<h3 id="what-is-a-service">What Is a Service?</h3>
+<p>Services are stateless. So the instance of the service doesn&rsquo;t need to remember the previous request/call of the call to that service, it has all the info that it needs in the request.</p>
+<h3 id="microservices-introduction">Microservices Introduction</h3>
+<p>Microservice architecture is SOA done right. Its an evolution of SOA, it builds upon its principles.</p>
+<p>SOA led to monolithic, but the concept it right. Microservice is a better implementation of it.</p>
+<p>Microservice makes use of lightweight communication, both between,</p>
+<ul>
+<li>client to service</li>
+<li>service to service</li>
+</ul>
+<p>Microservices needs to have a Technology Agnostic API, this means they need to follow a open communication protocol so that it does not dictate the tech. This enabled a .NET to talk with a JAVA service.</p>
+<p>Independently</p>
+<ul>
+<li>changeable</li>
+<li>deployable</li>
+</ul>
+<h3 id="the-monolithic">The Monolithic</h3>
+<p>In Monolithic, a minor change could result in complete rebuild of the application</p>
+<p>The only advantage of a monolithic over microservice is that the whole application runs on a single machine and hence it is easy to replicate and configure environments.</p>
+<h3 id="design-principles-introduction">Design Principles Introduction</h3>
+<p>Microservice Design Principles</p>
+<ul>
+<li>High Cohesion</li>
+<li>Autonomous</li>
+<li>Business Domain Centric</li>
+<li>Resilience</li>
+<li>Observable</li>
+<li>Automation</li>
+</ul>
+<p>High Cohesion</p>
+<ul>
+<li>Single focus</li>
+<li>Single responsibility</li>
+<li>Do one thing and only one good thing</li>
+<li>Similar to encapsulation principle</li>
+<li>Easily rewritable</li>
+</ul>
+<p>Autonomous</p>
+<ul>
+<li>Loose coupling</li>
+<li>Change to a MS should not be the reason for the change in another MS</li>
+<li>Honor contracts and interfaces</li>
+<li>Stateless</li>
+<li>Independently Changeable and Deployable</li>
+<li>Concurrent development</li>
+</ul>
+<p>Business Domain Centric</p>
+<ul>
+<li>Bounded context</li>
+<li>scope of service</li>
+</ul>
+<p>Resilience</p>
+<ul>
+<li>Embrace failure either by Degrade functionality (like in amazon, show only what is available) or default functionality</li>
+<li>Multiple instances</li>
+<li>Network failures and other kind of failures</li>
+</ul>
+<p>Observable</p>
+<ul>
+<li>System Health</li>
+<li>Centralized Monitoring
+<ul>
+<li>For capacity or scaling</li>
+</ul>
+</li>
+<li>Centralized logging
+<ul>
+<li>For debugging distributed transactions</li>
+</ul>
+</li>
+</ul>
+<p>Automation</p>
+<ul>
+<li>Automate everything</li>
+</ul>
+<h2 id="microservices-design">Microservices Design</h2>
+<h3 id="high-cohesion">High Cohesion</h3>
+<ul>
+<li>Identify a single focus</li>
+<li>Split into finer grained services</li>
+<li>Avoid &ldquo;Is kind of the same&rdquo;</li>
+<li>Don&rsquo;t get lazy by the additional work in creating/splitting a current service into multiple</li>
+</ul>
+<h3 id="autonomous">Autonomous</h3>
+<ul>
+<li>Loosely coupled</li>
+<li>Achieved by communicating with network</li>
+<li>Synch - this has an advantage to know if the call is success before going to the next step. But in reality, i do not think so. These can be achieved easily with async too</li>
+<li>Asynch - Publish events and others subscribed to event</li>
+<li>Asynch is the most decoupled form of communication</li>
+<li>Avoid client libraries, this increased coupling</li>
+<li>Use  Technology agnostic API (like JSON/REST)</li>
+<li>But DO NOT overdo the communication and create a chatty exchange between services (i think that&rsquo;s where DDD comes in future  for this)</li>
+<li>Avoid sharing things like database between services. It has shortterm benefits, but create high coupling in futures.</li>
+</ul>
+<h3 id="autonomous-ownership-and-versioning">Autonomous: Ownership and Versioning</h3>
+<p>Versioning</p>
+<ul>
+<li>Create a new version of the service if there are breaking changes on the contract and is not backward compatible.</li>
+<li>Maintain concurrent versioning when we need more time to decom the old version</li>
+<li>Co-existing endpoints</li>
+<li>Semantic versioning</li>
+<li>Major.Minor.Patch (e.g.: 15.2.1)</li>
+<li>Major = non-backward compatible</li>
+<li>Minor = backward compatible</li>
+<li>Patch = bug fix</li>
+</ul>
+<h3 id="resilience">Resilience</h3>
+<ul>
+<li>Design for known failures</li>
+<li>Failure of downstream systems</li>
+<li>Degrade functionality on failure detection</li>
+<li>Default functionality on failure detection</li>
+<li>Design system to fail fast (no value in doing a degrade/default func after 5min, it should be seamless)</li>
+<li>Use timeouts</li>
+<li>Timeout after a threshold</li>
+<li>service to service</li>
+<li>service to other systems</li>
+<li>network outages and latency too, not just system/service issues</li>
+<li>Monitor and log timeouts</li>
+</ul>
+<h3 id="observable-centralized-monitoring">Observable: Centralized Monitoring</h3>
+<ul>
+<li>Centralized Monitoring</li>
+<li>Real time monitoring</li>
+<li>Monitor the host (CPU, memory, disk usage)</li>
+<li>Expose metrics within the service</li>
+<li>Response times</li>
+<li>Timeouts</li>
+<li>Exceptions and errors</li>
+<li>Business data related metrics</li>
+<li>Number of orders</li>
+<li>Avg. time for checkout</li>
+<li>Collect and aggregate monitoring data</li>
+<li>Visualize the monitoring data for trends</li>
+<li>Tool to compare data across servers</li>
+<li>tool that can trigger alerts based on thresholds/inputs</li>
+</ul>
+<h3 id="observable-centralized-logging">Observable: Centralized Logging</h3>
+<ul>
+<li>Centralized logging</li>
+<li>When to log</li>
+<li>Startup or shutdown</li>
+<li>code path milestones</li>
+<li>timeouts, exceptions</li>
+<li>Structured logging</li>
+<li>Level (Info/debug/error/stat)</li>
+<li>Data and time</li>
+<li>Correlation ID</li>
+<li>Host name</li>
+<li>Service name and service instance</li>
+<li>Message</li>
+<li>Traceable distributed Correlation ID</li>
+</ul>
+<p>Observable</p>
+<ul>
+<li>The difference between Centralized Logging and Centralized Monitoring is</li>
+<li>Monitoring is just the numbers and counts</li>
+<li>Logging stores the detailed information behind those numbers</li>
+<li>Monitoring tells that something happened and Logging tells what/why/how that happened.</li>
+</ul>
+<p>Summary</p>
+<ul>
+<li>High Cohesion</li>
+<li>Single thing done well</li>
+<li>Single focus</li>
+<li>Approach</li>
+<li>Keep splitting service until it has only one reason to change</li>
+<li>Autonomous</li>
+<li>Independently changeable and deploy able</li>
+<li>Approach</li>
+<li>Loosely coupled system</li>
+<li>Versioning strategy</li>
+<li>Microservice ownership by team</li>
+<li>Business Domain Centric</li>
+<li>Represent business functions or represent a business domain</li>
+<li>Approach</li>
+<li>Course grain business domains</li>
+<li>Subgroup into functions (CRUD) and areas (get invoice)</li>
+<li>Resilience</li>
+<li>Embrace failure (design for it)</li>
+<li>Default or degrade functionality</li>
+<li>Approach</li>
+<li>Design for known failures</li>
+<li>Fail fast and recover fast</li>
+<li>Observable</li>
+<li>See system health</li>
+<li>Centralized logging and monitoring</li>
+<li>Approach</li>
+<li>Tools for real-time centralized monitoring</li>
+<li>Tools for centralized structured logging</li>
+<li>Automation</li>
+<li>Tools for testing and feedback</li>
+<li>Tools for deployment</li>
+<li>Approach</li>
+<li>Continuous Integration Tools</li>
+<li>Continuous Deployment Tools</li>
+</ul>
+<h2 id="technology-for-microservices">Technology for Microservices</h2>
+<h3 id="synchronous-communication">Synchronous Communication</h3>
+<p>Drawback of Synchronous Communication is that</p>
+<ul>
+<li>both parties have to be available, even if one of the service is down, the whole transaction will not be fulfilled.</li>
+<li>Performance is subject to network quality. Service may not be slow, it could be the network that is slow.</li>
+</ul>
+<h3 id="asynchronous-communication">Asynchronous communication</h3>
+<ul>
+<li>mitigated the need of client and service availability, there by decoupling them.</li>
+<li>More complicated to implement</li>
+<li>System relies on other platform (Message Q&rsquo;s), this creates another point of failure in the system</li>
+<li>Queuing issues lead to difficulty in debugging</li>
+</ul>
+<h2 id="moving-forward-with-microservices">Moving Forward with Microservices</h2>
+<h3 id="brownfield-micro-service--approach">Brownfield Micro service : Approach</h3>
+<ul>
+<li>Existing system</li>
+<li>Monolithic system</li>
+<li>Organically grown</li>
+<li>Seems too large to split</li>
+<li>Lacks microservices design principles</li>
+<li>Identify seams (the borders in your app along which you want to divide the domains)</li>
+<li>These seams are the future microservice boundaries</li>
+<li>Separation that reflects domains</li>
+<li>Identify bounded contexts</li>
+<li>These are not going to be clear and there will be lot of spill over. We need to identify the spills and decide where they needs to be added.</li>
+<li>Start modularising the bounded contexts</li>
+<li>Move code incrementally</li>
+<li>Tidy up a section per release</li>
+<li>This is to ensure existing functionality remains intact and usable</li>
+<li>Write unit and integration tests to verify and validate the changes</li>
+<li>keep reviewing and correcting</li>
+</ul>
+<h3 id="brownfield-microservices--migration">Brownfield Microservices : Migration</h3>
+<ul>
+<li>Convert bounded contexts into microservices</li>
+<li>Start off with one (to get comfortable)</li>
+<li>Make it switchable (maintain two versions of the code to switch in case of issues)</li>
+<li>How to prioritize ?</li>
+<li>By risk (starting with the least risk)</li>
+<li>By Technology</li>
+<li>By dependencies</li>
+<li>Incremental Approach</li>
+<li>Integrating with monolithic</li>
+<li>Monitor both for impact</li>
+<li>Monitor operations that talk to microservices (to see if the over the network microservice communication is degrading the performance of the monolithic)</li>
+<li>Review and improve incrementally</li>
+<li>Incrementally the monolithic will be converted</li>
+</ul>
+<h3 id="brownfield-ms--database-migration">Brownfield MS : Database Migration</h3>
+<ul>
+<li>Split database across seams</li>
+<li>To be compatable with existing monolithic, create a data link that connects to multiple databases</li>
+<li>For tables that link across seams, we either need to redesign them or make use of a API call to fetch that data.</li>
+<li>TODO: How to ensure data integrity between the services?</li>
+</ul>
+<h3 id="brownfield-ms--transactions">Brownfield MS : Transactions</h3>
+<ul>
+<li>Transactions are very easy in monolithic, not the same in microservice</li>
+</ul>
+<h3 id="greenfield-microservices">Greenfield Microservices</h3>
+<ul>
+<li>Evolving requirements, so not clear understanding of the domains</li>
+<li>System boundaries will evolve</li>
+<li>Start off with a monolithic design and let the seams evolve into clearer boundaries</li>
+<li>Modules becomes services</li>
+</ul>
+<h3 id="microservices-provisos">Microservices Provisos</h3>
+<p>TODO: &ldquo;Provisos&rdquo;, what is this?</p>
+<h1 id="microservices-getting-started">Microservices: Getting Started</h1>
+<h2 id="understanding-the-benefit-of-microservices">Understanding the Benefit of Microservices</h2>
+<h3 id="human-advantages-of-microservices">Human Advantages of Microservices</h3>
+<p>Monolithic demands a huge domain knowledge as you need to have the ability to make changes across all the modules of the application to implement a feature as they are all tightly coupled together. It is a high learning curve.</p>
+<p>It talks about the elimination of bottlenecks due to narrowed scope of responsibility and hence has low risk, this need not be true, as we give the ownership of a microservice to a team of two and hence the whole microservice could be potentially impacted. net-net, a debatable concept.</p>
+<p>Daniel Pick&rsquo;s 3 elements that are essential to creation motivation</p>
+<ul>
+<li>Autonomy</li>
+<li>Purpose</li>
+<li>Mastery</li>
+</ul>
+<p>Microservice helps address Autonomy and Mastery. That&rsquo;s 67% of motivation out of the box.</p>
+<p>Prefer a microservice per team, not teams per microservice. Subtle but critical.
+TODO: How to keep the team occupied if they are dedicated for a service and the service has no work in this PI?</p>
+<h3 id="resilience-benefits-of-microservices">Resilience Benefits of Microservices</h3>
+<p>Module Boundaries can blue over time. Enforcing isolated codebases reinforce boundaries.</p>
+<h2 id="the-challenges-of-microservices-over-monoliths">The Challenges of Microservices over Monoliths</h2>
+<h3 id="microservices-are-hard">Microservices Are Hard</h3>
+<p>Cost of Microservice is &ldquo;Complexity&rdquo;</p>
+<h3 id="resilience-of-network-communications">Resilience of Network Communications</h3>
+<p>IF not handled properly, the resilience challenges can lead to cascading failure, amplification effects and causing whole app downtime and outages all because a single microservice is down there by defeating the whole purpose of microservice.</p>
+<h3 id="running-microservices-in-production">Running Microservices in Production</h3>
+<p>Microservices emphasis strongly on automation as a single manual step in monolithic get amplified to Xtimes (once per each microservice). So the need for automation is more in the microservice.</p>
+<h3 id="challenges-of-independent-governance">Challenges of Independent Governance</h3>
+<p>TODO: What is the role of a software architect in microservices?</p>
+<p>The emphasis in MS architecture is in ensuring the right balance between autonomy and consistency for the teams. They should be autonomous enough to do their task, but not so much that we lose the consistence across the applications. It&rsquo;s a fine balance.</p>
+<p>Pulling data reports in monolithic is easy as it&rsquo;s just a single data store. Due to multiple data stores in MS, we have to redo the same across different data stores.</p>
+<p>TODO: How do you do a join query?</p>
+<p>Beware of &ldquo;Distributed Monolith&rdquo;, it has the complexity of microservices and the inflexibility of a monolithic. The worst of both world</p>
+<p>Need for a join across multiple data stores may mean that the boundaries of microservices are poorly choose.</p>
+<h3 id="reviewing-challenges-of-microservices">Reviewing Challenges of Microservices</h3>
+<p>Fancy word - &ldquo;Module extraction is perilous&rdquo;</p>
+<h2 id="synchronous-communication-architectures">Synchronous Communication Architectures</h2>
+<h3 id="introduction-to-rpc">Introduction to RPC</h3>
+<p>RPC = Remote Procedure Call</p>
+<ul>
+<li>HTTP Traffic, SQL Queries and even SOAP is also a RPC.</li>
+<li>RPC Properties</li>
+<li>Arguments</li>
+<li>has a Return Value</li>
+<li>Executed Immediately</li>
+<li>Client controls communication (its a pull)</li>
+<li>Two hosts involved</li>
+<li>Client waits for server (hence synchronous)</li>
+<li>Very easy to implement</li>
+</ul>
+<h3 id="service-discovery">Service Discovery</h3>
+<p>Service Discovery</p>
+<ul>
+<li>Network address of service is located dynamically</li>
+<li>DNS of Internet is the same concept.</li>
+<li>This enables each service is still independent and need not change when the IP of another service changes.</li>
+</ul>
+<p>Apache Zookeper is a kind of Service Discovery Tool</p>
+<ul>
+<li>Used internally in Hadoop, Kafka</li>
+<li>Has Massive scalability</li>
+<li>High performance</li>
+<li>But comes with the cost of complexity</li>
+</ul>
+<p>Hashicorp Consul</p>
+<ul>
+<li>Provide Multi-cloud complexity</li>
+<li>Provided security</li>
+</ul>
+<h3 id="stateless-and-stateful-rpcs">Stateless and Stateful RPCs</h3>
+<p>Stateless RPCs</p>
+<ul>
+<li>Functional Procedures - Pure functions that only influence return value</li>
+<li>Eg: Time server and invoice generator</li>
+<li>Conduits - serves as a facade to third party API</li>
+</ul>
+<p>Stateful RPC</p>
+<ul>
+<li>More complex than stateless</li>
+<li>Most meaningful work is stateful (huh?)</li>
+<li>State is distributed (very important)</li>
+<li>Need to handle Unreliable network (eg: Payment transactions)</li>
+</ul>
+<p>TODO: Network Partition
+Where network thinks some task is completed but the task never made through the network and is left waiting for response from the client end. When you do a retry, the stateful system rejects the duplicate.</p>
+<p>TODO: Idempotence
+State should not be changed due to multiple calls.
+In a chat service, the decision to show multiple notifications or not should be left to the notification service rather than the chat service. this enables us to reduce the risk of coupling.</p>
+<p>Co-ordination of Stateful RPC&rsquo;s</p>
+<ul>
+<li>All-or-nothing behavior of storing data is impossible to achieve.</li>
+<li>Choose a failure mode and identify whose/which service state is more important to maintain.</li>
+<li>The co-ordination of state across multiple services is often called distributed transaction</li>
+</ul>
+<h3 id="performance-of-synchronous-communications">Performance of Synchronous Communications</h3>
+<p>Performance of Synchronous communication</p>
+<p>Consider two services A and B with availability of 99.9 and 99.5%</p>
+<p>Communication between them will result in a net availability of AxB = 99.9 x 99.5 = 99.4% . If you notice, its less than the individual availability of each of these services.</p>
+<p>Now, add another service C with availability of 99.5, this leads to a over all availability of 98.9% which is way less for an acceptable SLA.</p>
+<p>This example indicates that the more services are chained together in a sync communication, the more it will lead to cascading failures.</p>
+<p>Now, add Latency to this calculation and it becomes way more interesting.</p>
+<p>Total latency = A + B + C</p>
+<p>Synchronous communications are very sensitive towards Availability and latency tradeoff&rsquo;s</p>
+<h2 id="asynchronous-communication-architectures">Asynchronous Communication Architectures</h2>
+<h3 id="introducing-asynchronous-communications">Introducing Asynchronous Communications</h3>
+<p>Asynchronous Communication</p>
+<ul>
+<li>Makes use of Message Bus Communication</li>
+<li>is a one way communication</li>
+<li>Is a fire and forget mode of communication</li>
+<li>In RPC, there are always 2 hosts, here there could be more than 2 due to the listener events</li>
+<li>The number of hosts could be dynamic without code changes</li>
+<li>The messages wait in a queue and may not be delivered immediately.</li>
+</ul>
+<p>Good example of the difference between RPC and async using a chat application</p>
+<p>Benefits of Asynchronous communication</p>
+<ul>
+<li>Faster, no need to wait for the response from all the services. just fire and forget</li>
+<li>Simpler redeploys; automatically handle brief downtime. As the messages are in queue, once the service is up, it will read from the queue and start processing.</li>
+<li>This is the answer to the cascading failures in sync comm</li>
+<li>Absorb spikes in load, helps when the load is more. demand &gt; capacity. This ensures the servies are not overloaded and get the service degraded.</li>
+<li>Isolate slow services (hide the flaws in design? :) ) or could be slow third party operations</li>
+<li>New services could be easily added without changes to other services as the new listener are dynamic.</li>
+</ul>
+<h3 id="message-bus-fundamentals">Message Bus Fundamentals</h3>
+<p>Anatomy of a message</p>
+<ul>
+<li>It is the smallest unit of data</li>
+<li>Payload</li>
+<li>Business-relavent data</li>
+<li>Headers</li>
+<li>Timestamp</li>
+<li>Sender Info</li>
+<li>Correlation Id</li>
+<li>Error handling information</li>
+<li>Custom headers</li>
+</ul>
+<p>Messages needs to be small</p>
+<ul>
+<li>Large messages harm throughput</li>
+<li>large messages Opportunity for failure</li>
+<li>Size limits needs to be enforced</li>
+<li>Offload to blob storage if need to send large message</li>
+</ul>
+<p>Messages are published to a topic in a message bus</p>
+<ul>
+<li>Topic defines semantics</li>
+<li>eg: post liked, post created, chat message sent</li>
+</ul>
+<p>Messages published to a topic are routed to a queue. A listener (client) reads from the queue.
+A consumer can subscribe to multiple topics</p>
+<ul>
+<li>All of them could be routed to the same queue</li>
+<li>or they could be routed to individual queues</li>
+</ul>
+<p>Message Queue</p>
+<ul>
+<li>Temporary storage location</li>
+<li>Acknowledge to clear (after processing the message)</li>
+<li>Supports Crash recovery</li>
+</ul>
+<h3 id="designing-asynchronous-communication-flows">Designing Asynchronous Communication Flows</h3>
+<p>The problem in sync, where we are trying to dea with the failures in notification and chat service can be avoided by having them read to different channels, so that once post is successful then it will post a message to notification and then notification service will decide if this notification needs to be displayed or if it is a duplicate. Even in case of any failures in the chat service, the message is still stored in dead letter queue and can be salvaged later point of time.</p>
+<p>Event Driven Architecture - A system that is driven by the production, detection, consumption and reaction to events.</p>
+<h3 id="distributed-transactions">Distributed Transactions</h3>
+<p>Distributed Transaction - A set of coordinated state changes spanning across a number of different independent services.</p>
+<p>Example is a
+Create Post needs to be processed to</p>
+<ul>
+<li>Sent to timeline</li>
+<li>Facial Recognition</li>
+<li>Photo screening for inappropriate content</li>
+<li>Advertising profile</li>
+<li>Notification service</li>
+<li>Abuse screening</li>
+<li>Payment processing (in case of a promoted tweet/post)</li>
+</ul>
+<p>All these events needs to be coordinated together and hence called a distributed transaction</p>
+<p>This can be achieved with chaining of events, but it has many pitfalls and is unrealistic</p>
+<p>Pitfalls of Event chaining for Distributed Transactions</p>
+<ul>
+<li>Hard to design for consistency at intermediate steps.</li>
+<li>It gets exponentially more complex to implement as the number of events in the design keep growing. Its not realistic</li>
+<li>Difficult to change routing without unintended consequences.</li>
+<li>What is not all of them are relevant? like payment processing or facial recognition?</li>
+<li>Hard to track the pending transactions as there will be many at each stage</li>
+<li>How do you even cancel a post in such architecture.</li>
+</ul>
+<p>Primary Concerns of Distributed Transactions</p>
+<ul>
+<li>Message Routing</li>
+<li>Can we make a single service responsible for all the routing rather than multiple small stake holders?</li>
+<li>This can also help us address the conditional routing issues like that of promoted tweets</li>
+<li>Transaction state</li>
+<li>Helps in centralizing the state and track progress</li>
+<li>Also solves the cancel problem</li>
+<li>Can also add resiliency to handle timeouts or invalid processing</li>
+<li>Failure compensation</li>
+<li>Helps with resolving scattered chained messaging (one transaction fails and the whole message is stuck)</li>
+<li>You get  failure in step#4, then we can automatically perform rollback or compensating operations at step 1,2,3</li>
+<li>Helps in achieving all or nothing model (but still not 100% as the rollback can fail too)</li>
+</ul>
+<h3 id="saga-pattern-and-routing-slip-pattern">Saga Pattern and Routing Slip Pattern</h3>
+<p>Saga Pattern</p>
+<ul>
+<li>Allows for distributed transactions</li>
+<li>Originally proposed for LLT&rsquo;s (Long Lived Transactions) that can take hours or days</li>
+<li>Was originally for same database</li>
+<li>For compensating operations (rollback)</li>
+<li>Later extended to distributed systems</li>
+<li>To centralize transaction state</li>
+<li>For Message Routing</li>
+<li>Failure compensation</li>
+</ul>
+<p>Saga Pattern</p>
+<ul>
+<li>This makes use of a centralized service that takes care of all state changes.</li>
+<li>Each message will consist of a correlation id, which will be maintained consistent across all the states</li>
+<li>Sends msg for step-1 and updates the DB with step-1-pending-status against the current correlation id</li>
+<li>When it receives the response from step-1, then it updates the status of the message and then sends the message to step-2</li>
+<li>this process continue for all the steps</li>
+<li>Once the final step is completed, it will delete all the records against the correlation id, implying that the final state is reached.</li>
+<li>This pattern is driven by receiving messages.</li>
+<li>When they receive a message, they transition state and as part of the state transition, they often publish other messages which will lead to further state transition (when we get the reply)</li>
+<li>Since this is all controlled centralized, we can control the sequence of state changes without any major code changes (we just need to change the sequence in the saga and the whole flow would be updated accordingly.)</li>
+<li>This helps eliminate the complexity which we would have with a message chaining architecture.</li>
+<li>If there is a failure, then we state running the compensating events for the previous steps, to revert the distributed transaction.</li>
+<li>This ensures we move the system to a state, where the transaction never happened (remember, all-or-nothing)</li>
+<li>This is called failure compensation</li>
+<li>This patterns also helps us to handle cancellation without too much complexity</li>
+<li>Timeouts can be scheduled too</li>
+<li>Additionally helps us to handle Parallel processing. But this will increase the complexity exponentially.</li>
+</ul>
+<p>Routing Slip Pattern</p>
+<ul>
+<li>Inspired from manufacturing</li>
+<li>Set of instructions attached to a work item</li>
+<li>Which stations to do</li>
+<li>What kind of work per station</li>
+<li>Which order</li>
+<li>At each station</li>
+<li>They do the work</li>
+<li>Pass the item to the next station.</li>
+<li>Rather than depend on a centralized transaction service, this believes in de-centralized (or empowering the individual units ) to hand off the work to the next appropriate state.</li>
+<li>Just like a double linked list. Every node knows what it needs to do and who is its prev and next states.</li>
+<li>At each step, we can add additional information to the message before we handoff to next step. Hence this pattern servers excellently as message routing.</li>
+</ul>
+<p>So,
+1&gt; We determine the processing steps in advance
+2&gt; Attach them to the message
+3&gt; The message gets routed in that sequence</p>
+<ul>
+<li>This do not have a centralized transaction state, so we do not know where the message is in the big pile. so cancel could be difficult.</li>
+<li>Once the initial slip is compiled, it will not be possible to change the sequence. Saga pattern is more dynamic in that case.</li>
+</ul>
+<p>TODO: Save this slide, good differences,</p>
+<h3 id="review-asynchronous-communications">Review: Asynchronous Communications</h3>
+<p>Asynchronous communications architectures are complex.</p>
+<p>They have many benefits (below), but are undoubted complex to maintain. so measure the costs carefully before jumping into.</p>
+<ul>
+<li>Resiliency</li>
+<li>Decoupled</li>
+<li>Load Smoothing</li>
+<li>Flexibility</li>
+</ul>
+<p>Event Driven architecture tend to exhibit &ldquo;Eventual Consistency&rdquo;, where there are temporary inconsistent states.</p>
+<h2 id="developing-features-in-a-microservices-architecture">Developing Features in a Microservices Architecture</h2>
+<h3 id="controlling-the-quality-of-a-microservice">Controlling the Quality of a Microservice</h3>
+<p>In a micro service, if we consider HTTP as the API and the dependencies as Database, message bus and other third party libs. These can be interchanged as the inputs and outputs for a logic bus. i.e. make use of the API&rsquo;s to control the behavior of the dependencies. When we are able to do that, then we will be able to automate the test of each and every part of our service/code and write unit tests accordingly.</p>
+<p>System Boundary - A place in the code where control is passes to or from an external system</p>
+<p>TODO: Take snippets from the slide here for the test pyramid. Good representation</p>
+<h3 id="continuous-delivery-techniques">Continuous Delivery Techniques</h3>
+<p>To add new features while the fear of breaking, we can use either</p>
+<ul>
+<li>API Versioning</li>
+<li>This would be needing more code changes as we need to maintain both code bases.</li>
+<li>Used more for non-backward compatible or major changes to the logic.</li>
+<li>Onus is on the developer to ensure bugs are fixed and propagated across all the versions</li>
+<li>Differentiated either by the version number in the url or in the messages.</li>
+<li>This defers the decision making to other services (like our svcorder v2/v3)</li>
+<li>Feature toggles</li>
+<li>Also called feature flags, where we control the old vs. new flow based on DB driven conditional operators.</li>
+<li>This enables us to only turn this on for specific users or user groups.</li>
+<li>This is more dynamic compared to API versioning</li>
+<li>more tuned for experimental features</li>
+<li>Bottom line is, avoid getting stuck waiting for the acceptance from all user groups before we deploy the services.</li>
+<li>These techniques, help us to avoid the synchronous deployments of services (that breaks the independence of the services)</li>
+</ul>
+<h3 id="microservice-team-culture">Microservice Team Culture</h3>
+<p>TODO: Nice slide</p>
+<h2 id="managing-microservices-architecture">Managing Microservices Architecture</h2>
+<h3 id="characterizing-design-improvement">Characterizing Design Improvement</h3>
+<p>Good Read: Martin Fowler, &ldquo;Design Stamina Hypothesis&rdquo; - continuing to modify code without continuously improving design causes the cumulative functionality over time to look flat, where over time, more and more effort is required to deliver the same sized increment of functionality.</p>
+<p>Focus more on Intent-Revealing Design</p>
+<ul>
+<li>Emphasizes &ldquo;why&rdquo; over &ldquo;what&rdquo;</li>
+<li>Hides away the irrelevant design</li>
+</ul>
+<p>Good design ensures malleability (TODO)</p>
+<h3 id="prioritizing-architectural-improvements">Prioritizing Architectural Improvements</h3>
+<p>TODO: &ldquo;Winning is the worst ting that can happen in Vegas&rdquo; - David Heinemeier Hansson</p>
+<p>TODO: &ldquo;Winning is the worst thing that can happen in Vegas&rdquo; - David Heinemeier Hansson</p>
+<p>Pursuit for &ldquo;flexibility&rdquo; is often the reason for software becoming inflexible.</p>
+<p>TODO: Good slide. First Derivative - Gregor Hohpe</p>
+<h3 id="influencing-architecture">Influencing Architecture</h3>
+<p>Prioritizing Architecture</p>
+<ul>
+<li>WE often add speculative functionality under the same of &ldquo;flexibility&rdquo;</li>
+<li>This leads way to maintenance tax and slows down the future delivery</li>
+<li>Pursuit of &ldquo;flexibility&rdquo; is often the reason for software becoming inflexible</li>
+<li>The question to ponder is, &ldquo;How do we invest in architectural improvements and avoid speculative &ldquo;flexibility&rdquo;?</li>
+<li>Architect lives in &ldquo;First Derivative&rdquo; - read more</li>
+</ul>
+<h2 id="building-resilient-microservices-architectures">Building Resilient Microservices Architectures</h2>
+<h3 id="resilience-starts-with-quality">Resilience Starts with Quality</h3>
+<p>Software Quality</p>
+<ul>
+<li>
+<p>External (what can be observed by an user)</p>
+</li>
+<li>
+<p>Visible to end-users</p>
+</li>
+<li>
+<p>Correctness</p>
+</li>
+<li>
+<p>User Experience</p>
+</li>
+<li>
+<p>Reliability</p>
+</li>
+<li>
+<p>Absence of errors</p>
+</li>
+<li>
+<p>Performance</p>
+</li>
+<li>
+<p>Internal (the state of the software design or architecture; ease to make changes in application)</p>
+</li>
+<li>
+<p>Visible to programmers</p>
+</li>
+<li>
+<p>Maintainability</p>
+</li>
+<li>
+<p>Testability</p>
+</li>
+<li>
+<p>Observability</p>
+</li>
+<li>
+<p>Simplicity</p>
+</li>
+<li>
+<p>Resilience starts with Quality</p>
+</li>
+<li>
+<p>Attention to both internal and external quality is the foundation for resilience.</p>
+</li>
+<li>
+<p>Understanding the systems limits is essential for managing resilience</p>
+</li>
+</ul>
+<h3 id="observable-microservices">Observable Microservices</h3>
+<p>Observability - The quality of a system that allows you to understand its internal behavior by inspecting its outputs.</p>
+<h2 id="evaluating-microservices-readiness">Evaluating Microservices Readiness</h2>
+<h3 id="microservices-are-a-poor-goal">Microservices Are a Poor Goal</h3>
+<p>Microservices are a means to an end. They are the solution for certain kind of problems and are not (and should not be) the goal in themselves</p>
+<h3 id="problems-suited-to-microservices">Problems Suited to Microservices</h3>
+<p>Key metrics for evaluating software development Capabilities</p>
+<ul>
+<li>Deployment frequency - how frequently can we deploy changes</li>
+<li>On demand</li>
+<li>Once a week to a month</li>
+<li>More than a month</li>
+<li>Lead time for changes - time it takes to build, test and deploy a new increment or functionality</li>
+<li>Mean time to recovery (MTTR) - time taken to restore a service</li>
+<li>Change failure rate - % of changes delivered to production that cause service degradation or require immediate remediation</li>
+</ul>
+<p>Microservices are well suited for challenges of</p>
+<ul>
+<li>Scale</li>
+<li>Complexity</li>
+<li>Governance</li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <a href="https://satyapavan.github.io/"><img src="https://satyapavan.github.io/images/logo.png" alt="Satya Pavan&#39;s Serverless Soul"></a>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark" href="tel:"><i
+                class="ti-mobile mr-3 text-primary"></i></a></li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i></li>
+          <li class="mb-3"><a class="text-dark" href="mailto:"><i
+                class="ti-email mr-3 text-primary"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="#">twitter</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="#">github</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/blog">Blog</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/tutorial">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://satyapavan.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://satyapavan.github.io/blog">Post</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | deployed on 2020-06-22 08:06:22 UTC |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://satyapavan.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://satyapavan.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/search/mark.js"></script>
+
+<script src="https://satyapavan.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://satyapavan.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-111600714-1', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>
